@@ -1,5 +1,5 @@
 <?php
-
+error_reporting(E_ERROR | E_PARSE);
 echo '<link rel="stylesheet" href="stylesheets/main-style.css">';
 
 $servername = "localhost";
@@ -7,6 +7,26 @@ $user = "root";
 $password = "";
 $dbname = "messages";
 
+echo "<nav>";
+echo "<ul>";
+echo "<li><a class='active' href='index.html'>Home</a></li>";
+echo "<li><a href='login.php'>Login</a></li>";
+echo "<li><a href='register.php'>Register</a></li>";
+echo "<li><a href='messaging.php'>messaging</a></li>";
+echo "<li><a href='search.php'>search messages</a></li>";
+echo "<li class='right-f'><a href='logout.php'>Logout</a></li>";
+
+echo '<li class="ddown right-f">';
+echo '<a href="auth_passed.php" class="dropbtn">Logged in as: ' . $_SESSION['user'] .'</a>';
+echo '<div class="ddown-content">';
+echo '<a href="profile.php">Profile</a>';
+echo '</div>';
+echo '</li>';
+echo "</ul>";
+echo "</nav>";
+echo "<div class='center'>";
+echo'<p1>Welcome ' . $_SESSION['user'] . '</p1>';
+echo '</div>';
 
 $conn = new mysqli($servername, $user, $password, $dbname);
 if ($conn->connect_error) {
