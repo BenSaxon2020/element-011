@@ -1,0 +1,322 @@
+/* ---imports--- */
+@import url(https://fonts.googleapis.com/css?family=Audiowide);
+@import url(https://fonts.googleapis.com/css?family=Exo+2);
+
+/* ---main body element styling--- */
+body {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: #74A4BC !important;
+    color: orange;
+    font-family: "Audiowide", sans-serif;
+    margin: 0;
+    z-index: -2;
+  }
+
+/* ---Overrights for repeetive things like center, left and right--- */
+
+/* -f stands for float and has the class component float: | -t stands for text and has the class component text-align:  */
+.right-f{
+  float: right !important;
+}
+.left-f{
+  float:left !important;
+}
+.left-t{
+  text-align: left !important;
+}
+.right-t{
+  text-align: right !important;
+}
+.center{
+  text-align: center !important;
+}
+.col-g-b{
+  color: #3E606F;
+}
+/* ---Button styling--- */
+
+.button {
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    
+}
+
+.button1{
+    background-color: rgb(53, 75, 199);
+    width: 15%;
+    border-radius: 4px;
+    text-align: center;
+}
+.button1:hover{
+    background-color: rgb(73, 92, 202);
+}
+
+.button-reg{
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    background-color: rgb(53, 75, 199);
+    /* width: 20 */
+    border-radius: 4px;
+}
+.button-reg:hover{
+    background-color: rgb(73, 92, 202);
+}
+
+/* ---form styling--- */
+
+.form_lable{
+    /* text-align: left; */
+    margin-left: 30%;
+    /* padding-right: 1%; */
+
+
+}
+
+input {
+    display: table;
+    margin: auto;
+    margin-top: 1%;
+    padding:10px;
+    border: 0;
+    border-radius:10px;
+}
+input[type=text]:hover {
+    border: 2px solid rgb(0, 0, 0);
+
+}
+
+
+/* ---nav bar styling--- */
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  li {
+    float: left;
+    border-right:1px solid #bbb;
+  }
+  
+  li:last-child {
+    border-right: none;
+  }
+  /* li a { means that this element class is only for a tags withing an li tag */
+  li a { 
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  /* li a:hover:not(.active) means that if the active class is not in use then it will run this class*/
+  li a:hover:not(.active) {
+    background-color: rgb(37, 36, 36);
+  }
+  /* sets the color of the active nav bar tab */
+  .active {
+    background-color: #151616;
+    }
+
+
+
+
+/* key frames animation */
+
+
+/* dropdown styling for navbar (this was a pain) */
+  li a, .dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li .dropdown:hover .dropbtn {
+    background-color: red;
+  }
+  
+  li.dropdown {
+    display: inline-block;
+  }
+  
+  .ddown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .ddown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .ddown-content a:hover {background-color: #f1f1f1;}
+  
+  .ddown:hover .ddown-content {
+    display: block;
+  }
+
+/* from here and below is testing */
+
+/* background-image: linear-gradient(white,white), linear-gradient(to right, #27273c, #867a37); */
+@keyframes particleAnimation
+{
+    from {
+        left: -100px;
+    }
+    to {
+        left: calc( 100% + 100px );
+    }
+}
+
+
+.p{
+  position:fixed;
+  left:0px;
+  top:50px;
+  width:1px;
+  height:1px;
+  background-color:white;
+  position:fixed;
+  animation-name:particleAnimation;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.p::before{
+  position:absolute;
+  display:block;
+  content:"";
+  width:100px;
+  right:1px;
+  top:0px;
+  height:1px;
+  background: linear-gradient(to right, rgba(0,0,0,0) 0%,rgba(255,255,255,0.4) 100%); 
+}
+.p-1{
+  animation-duration:1.7s;
+}
+.p-2{
+  animation-duration:5s;
+  top:10%;
+}
+.p-3{
+  animation-duration:4s;
+  top:15%;
+}
+.p-4{
+  animation-duration:6.5s;
+  top:25%;
+}
+.p-5{
+  animation-duration:6s;
+  top:29%;
+}
+.p-6{
+  animation-duration:7s;
+  top:33%;
+}
+.p-7{
+  animation-duration:5.7s;
+  top:40%;
+}
+.p-8{
+  animation-duration:6.5s;
+  top:47%;
+}
+.p-9{
+  animation-duration:6s;
+  top:53%;
+}
+.p-10{
+  animation-duration:7s;
+  top:59%;
+}
+.p-11{
+  animation-duration:5.7s;
+  top:63%;
+}
+.p-12{
+  animation-duration:6.5s;
+  top:70%;
+}
+
+
+/* typing anamation */
+.typecla{
+  padding-top: 5em;
+  display: flex;
+  justify-content: center;
+}
+.typeh h1 {
+  text-align: center;
+  color: orange;
+  overflow: hidden;
+  border-right: .15em solid orange; 
+  white-space: nowrap;
+  margin: 0 auto; 
+  letter-spacing: .15em; 
+  animation: 
+    typing 7.5s steps(80, end),
+    blink-caret .85s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 70% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
+}
+
+
+
+.card{
+  font-family: "Exo+2", sans-serif;
+  margin: auto;
+  /* text-align: center; */
+  margin-top: 2%;
+  padding: 5%;
+  margin-bottom: 3%;
+  width: 60%;
+  background-color: #B6D6CC;
+  /* border-radius: 5px; */
+  border-radius: 15px 30px 45px 7.5px;
+  outline-width: 0;
+}
+.card h1{
+  font-size: 20px;
+}
+
+.card p1{
+  font-size: 15px;
+}
